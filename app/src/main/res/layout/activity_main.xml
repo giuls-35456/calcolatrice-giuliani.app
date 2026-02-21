@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#1A1A2E">
+
+    <!-- Decorative Image (portrait) -->
+
+    <!-- Display -->
+
+    <ImageView
+        android:id="@+id/immagine_decorativa"
+        android:layout_width="131dp"
+        android:layout_height="128dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="Calcolatrice"
+        android:src="@android:drawable/ic_menu_edit" />
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#16213E"
+        android:ellipsize="start"
+        android:gravity="end|center_vertical"
+        android:minHeight="80dp"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp" />
+
+    <!-- Row 1: C, ±, %, ÷ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/BtCancella"
+            style="@style/BtnFunzione"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btdiviso"
+            style="@style/BtnOperatore"
+            android:backgroundTint="#03A9F4"
+            android:text="÷" />
+    </LinearLayout>
+
+    <!-- Row 2: 7, 8, 9, × -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/Bt7"
+            style="@style/BtnNumero"
+            android:layout_width="1dp"
+            android:text="7" />
+        <Button android:id="@+id/Bt8"
+            style="@style/BtnNumero"
+            android:text="8" />
+        <Button android:id="@+id/Bt9"
+            style="@style/BtnNumero"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/BtMoltiplicazione"
+            style="@style/BtnOperatore"
+            android:backgroundTint="#CDDC39"
+            android:text="×" />
+    </LinearLayout>
+
+    <!-- Row 3: 4, 5, 6, − -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button android:id="@+id/Bt4"
+            style="@style/BtnNumero"
+            android:text="4" />
+        <Button android:id="@+id/Bt5"
+            style="@style/BtnNumero"
+            android:text="5" />
+        <Button android:id="@+id/Bt6"
+            style="@style/BtnNumero"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/BtMeno"
+            style="@style/BtnOperatore"
+            android:backgroundTint="#BA9C27B0"
+            android:text="−" />
+    </LinearLayout>
+
+    <!-- Row 4: 1, 2, 3, + -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button android:id="@+id/Bt1"
+            style="@style/BtnNumero"
+            android:text="1" />
+        <Button android:id="@+id/Bt2"
+            style="@style/BtnNumero"
+            android:text="2" />
+        <Button android:id="@+id/Bt3"
+            style="@style/BtnNumero"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/Btpiu"
+            style="@style/BtnOperatore"
+            android:backgroundTint="#D32F2F"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Row 5: 0 (wide), ., = -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button android:id="@+id/Bt0"
+            style="@style/BtnNumero"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:gravity="center_vertical|start"
+            android:paddingStart="30dp"
+            android:text="0" />
+        <Button android:id="@+id/Btvirgola"
+            style="@style/BtnNumero"
+            android:text="." />
+        <Button android:id="@+id/Btuguale"
+            style="@style/BtnUguale"
+            android:text="=" />
+    </LinearLayout>
+
+</LinearLayout>
