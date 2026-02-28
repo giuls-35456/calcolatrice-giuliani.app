@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="6dp"
+    android:background="#1A1A2E">
+
+    <!-- ══════════════════════════════════════════════════════
+         DISPLAY
+    ══════════════════════════════════════════════════════ -->
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:background="#16213E"
+        android:ellipsize="start"
+        android:gravity="end|center_vertical"
+        android:minHeight="52dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp" />
+
+    <!-- ══════════════════════════════════════════════════════
+         RIGA SCIENTIFICA — log | xʸ | √x | 1/x | x!
+    ══════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/BtLog10"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="#1B5E20"
+            android:text="log"
+            android:textColor="#A5D6A7"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/BtPotenza"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="#1B5E20"
+            android:text="xʸ"
+            android:textColor="#A5D6A7"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/BtRadice"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="#1B5E20"
+            android:text="√x"
+            android:textColor="#A5D6A7"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/BtReciproco"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="#1B5E20"
+            android:text="1/x"
+            android:textColor="#A5D6A7"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/BtFattoriale"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="#1B5E20"
+            android:text="x!"
+            android:textColor="#A5D6A7"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════════════════════
+         RIGA 1 — C (wide)   ÷
+    ══════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/BtCancella"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="3"
+            android:layout_margin="3dp"
+            android:backgroundTint="#455A64"
+            android:text="C"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btdiviso"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="#03A9F4"
+            android:text="÷"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════════════════════
+         RIGA 2 — 7  8  9  ×
+    ══════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
+
+        <Button android:id="@+id/Bt7" style="@style/BtnNumero" android:text="7" />
+        <Button android:id="@+id/Bt8" style="@style/BtnNumero" android:text="8" />
+        <Button android:id="@+id/Bt9" style="@style/BtnNumero" android:text="9" />
+        <Button
+            android:id="@+id/BtMoltiplicazione"
+            style="@style/BtnOperatore"
+            android:backgroundTint="#CDDC39"
+            android:text="×" />
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════════════════════
+         RIGA 3 — 4  5  6  −
+    ══════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
+
+        <Button android:id="@+id/Bt4" style="@style/BtnNumero" android:text="4" />
+        <Button android:id="@+id/Bt5" style="@style/BtnNumero" android:text="5" />
+        <Button android:id="@+id/Bt6" style="@style/BtnNumero" android:text="6" />
+        <Button
+            android:id="@+id/BtMeno"
+            style="@style/BtnOperatore"
+            android:backgroundTint="#BA9C27B0"
+            android:text="−" />
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════════════════════
+         RIGA 4 — 1  2  3  +
+    ══════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
+
+        <Button android:id="@+id/Bt1" style="@style/BtnNumero" android:text="1" />
+        <Button android:id="@+id/Bt2" style="@style/BtnNumero" android:text="2" />
+        <Button android:id="@+id/Bt3" style="@style/BtnNumero" android:text="3" />
+        <Button
+            android:id="@+id/Btpiu"
+            style="@style/BtnOperatore"
+            android:backgroundTint="#D32F2F"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════════════════════
+         RIGA 5 — 0 (wide)  .  =
+    ══════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/Bt0"
+            style="@style/BtnNumero"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:gravity="center_vertical|start"
+            android:paddingStart="30dp"
+            android:text="0" />
+        <Button android:id="@+id/Btvirgola" style="@style/BtnNumero" android:text="." />
+        <Button android:id="@+id/Btuguale" style="@style/BtnUguale" android:text="=" />
+    </LinearLayout>
+
+</LinearLayout>
