@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F3F4"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <!-- DISPLAY: Area per l'operazione in corso (es. 5 + 5) -->
+    <TextView
+        android:id="@+id/displayExpression"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="end"
+        android:text=""
+        android:textColor="#70757A"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- DISPLAY: Area per il numero digitato e il risultato finale -->
+    <TextView
+        android:id="@+id/displayResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="end"
+        android:text="0"
+        android:textColor="#202124"
+        android:textSize="56sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/displayExpression" />
+
+    <!-- GRIGLIA BOTTONI -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/displayResult">
+
+        <!-- RIGA 1 -->
+        <Button android:id="@+id/btnClear" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="C" android:textColor="#D93025" android:textSize="22sp" />
+        <Button android:id="@+id/btnBackspace" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="DEL" android:textColor="#1A73E8" android:textSize="18sp" />
+        <Button android:id="@+id/btnPercent" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="%" android:textColor="#1A73E8" android:textSize="22sp" />
+        <Button android:id="@+id/btnDiv" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="÷" android:textColor="#1A73E8" android:textSize="28sp" />
+
+        <!-- RIGA 2 -->
+        <Button android:id="@+id/btn7" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="7" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btn8" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="8" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btn9" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="9" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btnMult" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="×" android:textColor="#1A73E8" android:textSize="28sp" />
+
+        <!-- RIGA 3 -->
+        <Button android:id="@+id/btn4" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="4" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btn5" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="5" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btn6" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="6" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btnMinus" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="−" android:textColor="#1A73E8" android:textSize="28sp" />
+
+        <!-- RIGA 4 -->
+        <Button android:id="@+id/btn1" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="1" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btn2" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="2" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btn3" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="3" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btnPlus" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="+" android:textColor="#1A73E8" android:textSize="28sp" />
+
+        <!-- RIGA 5 -->
+        <Button android:id="@+id/btnPlusMinus" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="+/-" android:textColor="#3C4043" android:textSize="20sp" />
+        <Button android:id="@+id/btn0" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="0" android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btnDot" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:text="." android:textColor="#3C4043" android:textSize="24sp" />
+        <Button android:id="@+id/btnEquals" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1" android:backgroundTint="#1A73E8" android:text="=" android:textColor="#FFFFFF" android:textSize="28sp" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
